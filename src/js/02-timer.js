@@ -55,7 +55,7 @@ flatpickr(input, {
 			startBtn.disabled = false;
 			let calculateMS = selectedDatesMs - actualDateMs;
 
-			const startBtnOnClick = () => {
+			const startBtnClick = () => {
 				const addLeadingZero = (value) => value.toString().padStart(2, "0");
 				timer = setInterval(() => {
 					const second = 1000;
@@ -83,7 +83,7 @@ flatpickr(input, {
 					}
 				}, 1000);
 			};
-			startBtn.addEventListener("click", startBtnOnClick);
+			startBtn.addEventListener("click", startBtnClick);
 		}
 	},
 });
