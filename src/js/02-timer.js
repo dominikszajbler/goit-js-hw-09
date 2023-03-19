@@ -13,8 +13,8 @@ const timerSeconds = document.querySelector('span[data-seconds]');
 
 timerItem.style.display = 'flex';
 timerItem.style.justifyContent = 'space-evenly';
-timerItem.style.width = '24%';
-timerItem.style.marginLeft = '16px';
+timerItem.style.width = '20%';
+timerItem.style.marginLeft = '25px';
 
 startBtn.disabled = true;
 
