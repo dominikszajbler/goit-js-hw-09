@@ -59,6 +59,7 @@ flatpickr(input, {
 			const startBtnClick = () => {
 				const addLeadingZero = (value) => value.toString().padStart(2, "0");
 				startBtn.disabled = true;
+				input.disabled = true;
 				timer = setInterval(() => {
 					const second = 1000;
 					const minute = second * 60;
