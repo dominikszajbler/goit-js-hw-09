@@ -46,17 +46,19 @@ flatpickr(input, {
 	minuteIncrement: 1,
 
 	onClose(selectedDates) {
-		let selectedDatesMs = selectedDates[0].getTime();
-		let actualDateMs = new Date().getTime();
+		const selectedDatesMs = selectedDates[0].getTime();
+		const actualDateMs = new Date().getTime();
 
 		if (selectedDatesMs < actualDateMs) {
 			Notiflix.Notify.failure("Please choose a date in the future");
+			startBtn.disabled = true;
 		} else {
 			startBtn.disabled = false;
 			let calculateMS = selectedDatesMs - actualDateMs;
 
 			const startBtnClick = () => {
 				const addLeadingZero = (value) => value.toString().padStart(2, "0");
+				startBtn.disabled = true;
 				timer = setInterval(() => {
 					const second = 1000;
 					const minute = second * 60;
